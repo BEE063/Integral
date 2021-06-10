@@ -19,7 +19,7 @@ namespace CalculateIntegral
         public Integral(Func<double, double> f, double a, double b, double e)
         {
             func = f;
-            _semaphore = new Semaphore(1, 1);
+            _semaphore = new Semaphore(8, 8);
             _leftPoint = a;
             _rightPoint = b;
             _eps = e;
